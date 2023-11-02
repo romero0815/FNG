@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirmaMAUI.Pages.Login.InitialPage"
+             Title="InitialPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#1c2a69</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid RowDefinitions="500,100,*">
+                <Button VerticalOptions="EndAndExpand" HorizontalOptions="Center" Text="Ingresar" BackgroundColor="BlueViolet" 
+                    Grid.Row="2" WidthRequest="150" HeightRequest="55" TextColor="White" FontSize="Medium" Clicked="Button_Clicked" CornerRadius="10"></Button>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

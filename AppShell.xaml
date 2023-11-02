@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FirmaMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FirmaMAUI.Pages.Login"
+    xmlns:home="clr-namespace:FirmaMAUI"
+    xmlns:ruv="clr-namespace:FirmaMAUI.Pages.Formularios"
+    BindingContext="{Binding Source={StaticResource viewModelLocator}, Path=AppShellViewModel}">
+
+
+    <!--<FlyoutItem FlyoutItemIsVisible="False" IsVisible="False"  Title="InitialPage"  Icon="icon_feed.png">
+        <ShellContent FlyoutItemIsVisible="False" ContentTemplate="{DataTemplate local:InitialPage}" />
+
+    </FlyoutItem>-->
+
+    <FlyoutItem Title="Home" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate home:MainPage}" Route="MainPage" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="RUV"  Icon="icon_feed.png">
+        <ShellContent ContentTemplate="{DataTemplate ruv:RUV}" Route="RUV" />
+
+    </FlyoutItem>
+
+    <MenuItem Text="Cerrar sesión"  Clicked="MenuItem_Clicked">
+    </MenuItem>
+
+    <!--<MenuItem Command="{Binding GoToRuvCommand}" Text="RUV"></MenuItem>-->
+
+</Shell>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirmaMAUI.Pages.Login.Login"
+             Title="Login"
+             xmlns:renders="clr-namespace:FirmaMAUI.Renders"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontFamily" Value="Roboto-Regular" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+
+
+
+
+            <Grid x:Name="gridLogin" Margin="20,20,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="1"
+                     Text="INGRESO"
+                     Margin="0,0,0,20"
+                     FontSize="Title"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" TextColor="Black" />
+
+                <Label Grid.Row="2" Margin="0,0,50,10"
+                     Text="por favor, introduzca los detalles a continuación para continuar"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center" TextColor="Black" />
+
+
+                <Frame Grid.Row="3"
+					Margin="0,10,0,10"
+					Padding="0"
+					BorderColor="LightGray"
+					CornerRadius="5"
+					HasShadow="True"
+					HeightRequest="60"
+					IsClippedToBounds="True">
+                    
+                        <renders:MyEntry x:Name="user"
+                         Style="{StaticResource EntryStyle}"
+                         Margin="15,10,0,0" BorderColor="LightGray"
+                         CornerRadius="5"
+                         Placeholder="Usuario" 
+                         TextColor="Black" 
+                         IsCurvedCornersEnabled="False" />
+                        
+                        
+                    
+                </Frame>
+
+                
+                
+                <Frame Grid.Row="4"
+				Margin="0,10,0,10"
+				Padding="0"
+				BorderColor="LightGray"
+				CornerRadius="5"
+				HasShadow="True"
+				HeightRequest="60"
+				IsClippedToBounds="True">
+                    <StackLayout Margin="0" Padding="0" Orientation="Horizontal">
+                        <renders:MyEntry 
+                             EnabledColor="True"
+                             x:Name="Contraseña"
+                             MaxLength="30"
+                             Style="{StaticResource EntryStyle}"
+                             Margin="15,10,0,0" BorderColor="LightGray"
+                             CornerRadius="5"
+                             Placeholder="Contraseña" 
+                             IsPassword="True"
+                             TextColor="Black" 
+                             IsCurvedCornersEnabled="False" />
+
+                        <Image x:Name="btn_pass" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" Source="ojo_cerrado.png" HeightRequest="20" WidthRequest="20">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                </Frame>
+
+
+              
+
+                <Button Grid.Row="5" HeightRequest="50" Text="INGRESAR" Margin="0,10,0,10" x:Name="inicio" Background="Blue" Clicked="inicio_Clicked_1" TextColor="White" />
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+   
+</ContentPage>

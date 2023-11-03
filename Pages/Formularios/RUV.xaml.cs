@@ -21,8 +21,13 @@ public partial class RUV : ContentPage
         base.OnAppearing();
     }
 
-    private async void next_Clicked(object sender, EventArgs e)
+    //private async void next_Clicked(object sender, EventArgs e)
+    //{
+    //    await Navigation.PushAsync(new RUV6());
+    //}
+
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new RUV6());
+        await Navigation.PushAsync(new RUV2());
     }
 }

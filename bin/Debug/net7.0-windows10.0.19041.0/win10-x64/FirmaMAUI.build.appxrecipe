@@ -691,6 +691,9 @@
     <AppxPackagedFile Include="C:\Users\usuario\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\usuario\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\usuario\.nuget\packages\system.speech\7.0.0\runtimes\win\lib\net7.0\System.Speech.dll">
       <PackagePath>System.Speech.dll</PackagePath>
     </AppxPackagedFile>
@@ -885,6 +888,33 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\header_paginas_internas.scale-100.png">
+      <PackagePath>header_paginas_internas.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\header_paginas_internas2x.scale-100.png">
+      <PackagePath>header_paginas_internas2x.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_calendar.scale-100.png">
+      <PackagePath>icon_calendar.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_calendar.scale-125.png">
+      <PackagePath>icon_calendar.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_calendar.scale-150.png">
+      <PackagePath>icon_calendar.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_calendar.scale-200.png">
+      <PackagePath>icon_calendar.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_calendar.scale-400.png">
+      <PackagePath>icon_calendar.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ojo.scale-100.png">
+      <PackagePath>ojo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\FirmaMAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ojo_cerrado.scale-100.png">
+      <PackagePath>ojo_cerrado.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

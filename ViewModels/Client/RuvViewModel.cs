@@ -42,6 +42,34 @@ namespace FirmaMAUI.ViewModels.Client
             set => SetProperty(ref _jsonFase6, value);
         }
 
+        private int _totalVacunadosAftosa = 0;
+        public int TotalVacunadosAftosa
+        {
+            get => _totalVacunadosAftosa;
+            set => SetProperty(ref _totalVacunadosAftosa, value);
+        }
+
+        private int _totalNoVacunadosAftosa = 0;
+        public int TotalNoVacunadosAftosa
+        {
+            get => _totalNoVacunadosAftosa;
+            set => SetProperty(ref _totalNoVacunadosAftosa, value);
+        }
+
+        private int _totalVacunadosBrucelosis = 0;
+        public int TotalVacunadosBrucelosis
+        {
+            get => _totalVacunadosBrucelosis;
+            set => SetProperty(ref _totalVacunadosBrucelosis, value);
+        }
+
+        private int _totalNoVacunadosBrucelosis = 0;
+        public int TotalNoVacunadosBrucelosis
+        {
+            get => _totalNoVacunadosBrucelosis;
+            set => SetProperty(ref _totalNoVacunadosBrucelosis, value);
+        }
+
         public override async Task InitializeAsync(object navigationData)
         {
             await base.InitializeAsync(navigationData);
@@ -51,12 +79,6 @@ namespace FirmaMAUI.ViewModels.Client
         public void LoadJson()
         {
             JsonFase1 = "[{" +
-            "'label': 'Fecha de vacunación'," +
-            "'type': 'DatePiker'" +
-            "},{" +
-            "'label': 'Hora de llegada del predio'," +
-            "'type': 'DatePiker'" +
-            "},{" +
             "'label': 'Organización Ejecutora Ganadera Autorizada'," +
             "'type': 'Entry'" +
             "},{" +
@@ -84,10 +106,6 @@ namespace FirmaMAUI.ViewModels.Client
         public void LoadJsonFase2()
         {
             JsonFase2 = "[{" +
-            "'label': 'Código Predio'," +
-            "'type': 'Entry'" +
-            "}," +
-            "{" +
             "'label':'Periodo nuevo'," +
             "'type':'radioButtom'," +
             "'isTrue':'true'" +
@@ -155,7 +173,7 @@ namespace FirmaMAUI.ViewModels.Client
 
         public void LoadJson6()
         {
-            JsonFase6 = "{\"Vacunas\":[{\"Id\":\"1\",\"Nombre\":\"BRUCELOSIS\",\"IdCategoriaEtaria\":[\"2\"]},{\"Id\":\"1\",\"Nombre\":\"AFTOSA\",\"IdCategoriaEtaria\":[\"1\",\"2\",\"8\",\"11\"]}],\"Etaria\":[{\"Id\":\"1\",\"Categoria\":\"HEMBRA DE 1 A 3 MESES\"},{\"Id\":\"2\",\"Categoria\":\"HEMBRA DE 3 A 9 MESES\"},{\"Id\":\"3\",\"Categoria\":\"HEMBRA DE 12 MESES A 2 AÑOS\"},{\"Id\":\"8\",\"Categoria\":\"MACHO DE 2 A 3 MESES\"},{\"Id\":\"9\",\"Categoria\":\"MACHO DE 3 A 9 MESES\"},{\"Id\":\"11\",\"Categoria\":\"MACHO DE 12 MESES A 2 AÑOS\"},{\"Id\":\"12\",\"Categoria\":\"NUEVOS\"}]}";
+            JsonFase6 = "{\"Vacunas\":[{\"Id\":\"1\",\"Nombre\":\"BRUCELOSIS\",\"IdCategoriaEtaria\":[\"2\",\"8\"]},{\"Id\":\"1\",\"Nombre\":\"AFTOSA\",\"IdCategoriaEtaria\":[\"1\",\"2\",\"8\",\"11\"]}],\"Etaria\":[{\"Id\":\"1\",\"Categoria\":\"HEMBRA DE 1 A 3 MESES\"},{\"Id\":\"2\",\"Categoria\":\"HEMBRA DE 3 A 9 MESES\"},{\"Id\":\"3\",\"Categoria\":\"HEMBRA DE 12 MESES A 2 AÑOS\"},{\"Id\":\"8\",\"Categoria\":\"MACHO DE 2 A 3 MESES\"},{\"Id\":\"9\",\"Categoria\":\"MACHO DE 3 A 9 MESES\"},{\"Id\":\"11\",\"Categoria\":\"MACHO DE 12 MESES A 2 AÑOS\"},{\"Id\":\"12\",\"Categoria\":\"NUEVOS\"}]}";
         }
     }
 }

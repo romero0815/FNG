@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = FirmaMAUI.Pages.Controls.R
 build_metadata.AdditionalFiles.TargetPath = Pages\Controls\RUVFase1.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Controls\RUVFase1.xaml
 
+[C:/FirmaMAUI/Pages/Controls/RUVFase2.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirmaMAUI.Pages.Controls.RUVFase2.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Controls\RUVFase2.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Controls\RUVFase2.xaml
+
 [C:/FirmaMAUI/Pages/Controls/RUVFase6.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FirmaMAUI.Pages.Controls.RUVFase6.xaml
@@ -45,6 +51,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FirmaMAUI.Pages.Formularios.RUV.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Formularios\RUV.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Formularios\RUV.xaml
+
+[C:/FirmaMAUI/Pages/Formularios/RUV2.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FirmaMAUI.Pages.Formularios.RUV2.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Formularios\RUV2.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Formularios\RUV2.xaml
 
 [C:/FirmaMAUI/Pages/Formularios/RUV6.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

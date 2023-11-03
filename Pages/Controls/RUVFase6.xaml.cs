@@ -6,6 +6,7 @@ using FirmaMAUI.Renders;
 using FirmaMAUI.ViewModels.Base;
 using FirmaMAUI.ViewModels.Client;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace FirmaMAUI.Pages.Controls;
 
@@ -60,7 +61,7 @@ public partial class RUVFase6 : ContentView
                 {
                     Frame frameCard = new()
                     {
-                        Margin = new Thickness(15, 15, 15, 15),
+                        Margin = new Thickness(15, 5, 15, 5),
                         CornerRadius = 10,
                         BorderColor = Colors.LightGray,
                         BackgroundColor = Colors.White,
@@ -78,6 +79,8 @@ public partial class RUVFase6 : ContentView
                         layout.Children.Add(new Label { Text = items.Categoria, Margin = new Thickness(0,5,0,5), FontSize = 15, TextColor = Colors.Black });
                         layout.Children.Add(new Label { Text = items.NombreVacuna, Margin = new Thickness(0,5,0,5), FontSize = 12, TextColor = Colors.Black });
 
+                        var nameEntryVacunado = items.Categoria + items.NombreVacuna + items.IdCategoriaEtarea + "SI";
+                        var nameEntryNoVacunado = items.Categoria + items.NombreVacuna + items.IdCategoriaEtarea + "NO";
 
                         StackLayout layoutButtons = new() { Orientation = StackOrientation.Horizontal ,VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.StartAndExpand };
 
@@ -112,15 +115,52 @@ public partial class RUVFase6 : ContentView
 
 
 
-                        layoutContBoton1.Children.Add(new MyEntry { Text = "0", HeightRequest = 40, WidthRequest = 50, BackgroundColor = Color.FromArgb("#aa5ee5"),
-                            VerticalTextAlignment = TextAlignment.Center, HorizontalTextAlignment = TextAlignment.Center, TextColor = Colors.White, CornerRadius = 5 , Margin = new Thickness(0)});
+                        var entryCount1 = new MyEntry
+                        {
+                            Text = "0",
+                            HeightRequest = 40,
+                            WidthRequest = 50,
+                            BackgroundColor = Color.FromArgb("#aa5ee5"),
+                            VerticalTextAlignment = TextAlignment.Center,
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            TextColor = Colors.White,
+                            CornerRadius = 5,
+                            Margin = new Thickness(0), 
+                            Keyboard = Keyboard.Numeric,
+                            Nombre = items.NombreVacuna+"SI",
+                            StyleId = nameEntryVacunado
+                        };
+
+                        entryCount1.Completed += SumarValores;
+
+                        _visualElement.Add(entryCount1);
+
+                        layoutContBoton1.Children.Add(entryCount1);
                         frameBoton1.Content = layoutContBoton1;
                         layoutButtons.Children.Add(frameBoton1);
 
                         layoutButtons.Children.Add(new Label { Text = "vacunados", Margin = new Thickness(5, 10, 0, 0), FontSize = 10 });
 
-                        layoutContBoton2.Children.Add(new MyEntry { Text = "0", HeightRequest = 40, WidthRequest = 50, BackgroundColor = Color.FromArgb("#aa5ee5"),
-                            VerticalTextAlignment = TextAlignment.Center, HorizontalTextAlignment = TextAlignment.Center, TextColor = Colors.White, CornerRadius = 5 });
+
+                        var entryCount2 = new MyEntry
+                        {
+                            Text = "0",
+                            HeightRequest = 40,
+                            WidthRequest = 50,
+                            BackgroundColor = Color.FromArgb("#aa5ee5"),
+                            VerticalTextAlignment = TextAlignment.Center,
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            TextColor = Colors.White,
+                            CornerRadius = 5,
+                            Keyboard = Keyboard.Numeric,
+                            Nombre = items.NombreVacuna + "NO",
+                            StyleId = nameEntryNoVacunado
+                        };
+
+                        entryCount2.Completed += SumarValores;
+                        _visualElement.Add(entryCount2);
+
+                        layoutContBoton2.Children.Add(entryCount2);
                         frameBoton2.Content = layoutContBoton2;
                         layoutButtons.Children.Add(frameBoton2);
 
@@ -137,7 +177,7 @@ public partial class RUVFase6 : ContentView
                 {
                     Frame frameCard = new()
                     {
-                        Margin = new Thickness(15, 15, 15, 15),
+                        Margin = new Thickness(15, 5, 15, 5),
                         CornerRadius = 10,
                         BorderColor = Colors.LightGray,
                         BackgroundColor = Colors.White,
@@ -153,6 +193,8 @@ public partial class RUVFase6 : ContentView
 
                         layout.Children.Add(new Label { Text = item.NombreVacuna, Margin = new Thickness(0, 5, 0, 5), FontSize = 12, TextColor = Colors.Black });
 
+                        var nameEntryVacunado = item.Categoria + item.NombreVacuna + item.IdCategoriaEtarea + "SI";
+                        var nameEntryNoVacunado = item.Categoria + item.NombreVacuna + item.IdCategoriaEtarea + "NO";
 
                         StackLayout layoutButtons = new() { Orientation = StackOrientation.Horizontal, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.StartAndExpand };
 
@@ -185,7 +227,7 @@ public partial class RUVFase6 : ContentView
 
                         StackLayout layoutContBoton2 = new() { Margin = new Thickness(0, 0, 0, 0) };
 
-                        layoutContBoton1.Children.Add(new MyEntry
+                        var entryCount1 = new MyEntry
                         {
                             Text = "0",
                             HeightRequest = 40,
@@ -195,14 +237,23 @@ public partial class RUVFase6 : ContentView
                             HorizontalTextAlignment = TextAlignment.Center,
                             TextColor = Colors.White,
                             CornerRadius = 5,
-                            Margin = new Thickness(0)
-                        });
+                            Margin = new Thickness(0),
+                            Keyboard = Keyboard.Numeric,
+                            Nombre = item.NombreVacuna + "SI", 
+                            StyleId = nameEntryVacunado
+                        };
+
+                        entryCount1.Completed += SumarValores;
+
+                        _visualElement.Add(entryCount1);
+
+                        layoutContBoton1.Children.Add(entryCount1);
                         frameBoton1.Content = layoutContBoton1;
                         layoutButtons.Children.Add(frameBoton1);
 
                         layoutButtons.Children.Add(new Label { Text = "vacunados", Margin = new Thickness(5, 10, 0, 0), FontSize = 10 });
 
-                        layoutContBoton2.Children.Add(new MyEntry
+                        var entryCount2 = new MyEntry
                         {
                             Text = "0",
                             HeightRequest = 40,
@@ -211,8 +262,17 @@ public partial class RUVFase6 : ContentView
                             VerticalTextAlignment = TextAlignment.Center,
                             HorizontalTextAlignment = TextAlignment.Center,
                             TextColor = Colors.White,
-                            CornerRadius = 5
-                        });
+                            CornerRadius = 5,
+                            Keyboard = Keyboard.Numeric,
+                            Nombre = item.NombreVacuna + "NO",
+                            StyleId = nameEntryNoVacunado
+                        };
+
+                        entryCount2.Completed += SumarValores;
+
+                        _visualElement.Add(entryCount2);
+
+                        layoutContBoton2.Children.Add(entryCount2);
                         frameBoton2.Content = layoutContBoton2;
                         layoutButtons.Children.Add(frameBoton2);
 
@@ -237,6 +297,35 @@ public partial class RUVFase6 : ContentView
        
     }
 
-  
+    private void SumarValores(object sender, EventArgs e)
+    {
+        MyEntry entry = (MyEntry)sender;
+        var entryVisualElement = (MyEntry)_visualElement.FirstOrDefault(x => x.StyleId == entry.StyleId);
+
+        if (entryVisualElement != null)
+        {
+            if(entry.Nombre == "BRUCELOSISSI")
+            {
+                ViewModelLocator.Resolve<RuvViewModel>().TotalVacunadosBrucelosis += Convert.ToInt32(entry.Text);
+            }
+            else if (entry.Nombre == "BRUCELOSISNO")
+            {
+                ViewModelLocator.Resolve<RuvViewModel>().TotalNoVacunadosBrucelosis += Convert.ToInt32(entry.Text);
+            }
+            else if (entry.Nombre == "AFTOSASI")
+            {
+                ViewModelLocator.Resolve<RuvViewModel>().TotalVacunadosAftosa += Convert.ToInt32(entry.Text);
+            }
+            else
+            {
+                ViewModelLocator.Resolve<RuvViewModel>().TotalNoVacunadosAftosa += Convert.ToInt32(entry.Text);
+            }
+        }
+
+        
+    }
+
+
+
 
 }
